@@ -16,7 +16,7 @@ def test_extract_nifti_data(tmpdir):
     assert np.array_equal(loaded_data, data), "loading is incorrect"
 
 def test_threshold_data():
-    data = np.random.rand(4 ,4)
+    data = np.random.rand(5 ,5)
     threshold = 0.1
     thresholded_data = threshold_data(data, threshold)
     assert (thresholded_data > threshold).all(), "thresholding is incorrect"
